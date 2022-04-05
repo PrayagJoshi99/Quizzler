@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput} from 'react-native';
-import Style from './Style'
+import Style from './Style';
 class FloatingInput extends Component {
   render() {
     return (

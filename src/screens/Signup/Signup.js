@@ -4,7 +4,6 @@ import Styles from './Style';
 import FloatingInput from '../../components/Floatinput/FloatInput';
 
 class SignUp extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -112,14 +111,12 @@ class SignUp extends Component {
             <FloatingInput
               placeholder="name"
               name="name"
-              onChangeText={this.handleName}
-            ></FloatingInput>
+              onChangeText={this.handleName}></FloatingInput>
             <FloatingInput
               placeholder="E-mail"
               name="email"
               keyboardType="email-address"
-              onChangeText={this.handleEmail}
-            ></FloatingInput>
+              onChangeText={this.handleEmail}></FloatingInput>
             <FloatingInput
               placeholder="phone"
               name="phone"

@@ -5,7 +5,6 @@ import PieChart from 'react-native-pie-chart';
 import {Button} from 'react-native-elements';
 import {useStateValue} from '../stateProvider';
 const congratScreen = ({navigation}) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [{user, score}] = useStateValue();
   const widthAndHeight = 150;
   const series = [score, 10 - score];

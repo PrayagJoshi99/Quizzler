@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, {useState} from 'react';
 import {
   View,
@@ -17,7 +16,7 @@ const welcomeScreen = ({navigation}) => {
   const [Name, setName] = useState('');
   return (
     <View style={styles.welcomeScreen}>
-      <Image style={styles.logo} source={require('../../assets/logo.png')} />
+      <Image style={styles.logo} source={require('../../assets/quizler.png')} />
       <Text style={styles.welcomeText}>Welcome To Quizzler</Text>
       <Text style={styles.welcomeText}>Enter your name to Proceed...</Text>
       <TextInput
@@ -58,6 +57,7 @@ const styles = StyleSheet.create({
   logo: {
     height: 200,
     width: 200,
+    borderRadius: 20,
   },
   welcomeText: {
     fontSize: 25,

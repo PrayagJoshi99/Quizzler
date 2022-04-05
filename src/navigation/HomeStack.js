@@ -3,6 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import welcomeScreen from '../screens/welcomeScreen';
 import quizScreen from '../screens/QuizScreens/quizScreen';
+import PythonScreen from '../screens/QuizScreens/pythonQuizScreen';
+import SqlScreen from '../screens/QuizScreens/sqlQuizScreen';
+import JavaScreen from '../screens/QuizScreens/javaQuizScreen';
 import {StateProvider} from '../stateProvider';
 import reducer, {initialState} from '../reducer';
 import congratScreen from '../screens/congratScreen';
@@ -32,6 +35,24 @@ const App = () => {
           <Stack.Screen
             name="QuestionScreen"
             component={quizScreen}
+            options={{headerShown: false}}
+            initialParams={{index: 0}}
+          />
+          <Stack.Screen
+            name="PythonQuizScreen"
+            component={PythonScreen}
+            options={{headerShown: false}}
+            initialParams={{index: 0}}
+          />
+          <Stack.Screen
+            name="SqlQuizScreen"
+            component={SqlScreen}
+            options={{headerShown: false}}
+            initialParams={{index: 0}}
+          />
+          <Stack.Screen
+            name="JavaQuizScreen"
+            component={JavaScreen}
             options={{headerShown: false}}
             initialParams={{index: 0}}
           />

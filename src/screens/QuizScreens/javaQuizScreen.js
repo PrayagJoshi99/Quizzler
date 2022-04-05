@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Option from '../../components/Options/Option';
+import Option from '../../components/Options/JavaOptions';
 import Questions from '../../jsonFiles/questions.json';
 
 export default function quizScreen({route, navigation}) {
@@ -9,11 +9,11 @@ export default function quizScreen({route, navigation}) {
     <View style={styles.mainView}>
       <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
         <Text style={styles.questionNo}>
-          {index + 1}/{Questions.questions.length}
+          {index + 1}/{Questions.java.length}
         </Text>
       </View>
-      <Text style={styles.Question}>{Questions.questions[index].question}</Text>
-      {Questions.questions[index].answers.map((option, i) => (
+      <Text style={styles.Question}>{Questions.java[index].question}</Text>
+      {Questions.java[index].answers.map((option, i) => (
         <Option
           value={option}
           navigation={navigation}

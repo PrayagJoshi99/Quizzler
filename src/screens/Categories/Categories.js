@@ -28,11 +28,21 @@ export default function quizScreen({navigation}) {
             }}>
             React
           </Text>
-          <Text style={styles.options}>SQL</Text>
+          <Text style={styles.options} onPress={() => {
+              navigation.navigate('SqlQuizScreen');
+            }}>SQL</Text>
         </View>
         <View style={{marginLeft: 10}}>
-          <Text style={styles.options}>Python</Text>
-          <Text style={styles.options}>Java</Text>
+          <Text
+            style={styles.options}
+            onPress={() => {
+              navigation.navigate('PythonQuizScreen');
+            }}>
+            Python
+          </Text>
+          <Text style={styles.options} onPress={() => {
+              navigation.navigate('JavaQuizScreen');
+            }}>Java</Text>
         </View>
       </View>
     </View>

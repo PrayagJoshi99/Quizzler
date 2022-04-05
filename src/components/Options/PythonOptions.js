@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import Questions from '../jsonFiles/questions.json';
-import {useStateValue} from '../stateProvider';
+import Questions from '../../jsonFiles/questions.json';
+import {useStateValue} from '../../stateProvider';
 
 const Option = props => {
   const [{score}, dispatch] = useStateValue();
@@ -12,29 +12,20 @@ const Option = props => {
     });
   };
   console.log(score);
-  let correctAnswerIdx = Questions.questions[props.qnIndex].correctIndex;
-  // let handleValidation = () => {
-  //   if (props.optionIdx === correctAnswerIdx) {
-  //     console.log('Correct Answer');
-  //     setOptioncolor({borderColor: 'green'});
-  //   } else {
-  //     console.log('Wrong Answer');
-  //     setOptioncolor({borderColor: 'red'});
-  //   }
-  // };
+  let correctAnswerIdx = Questions.python[props.qnIndex].correctIndex;
   return (
     <View>
       <TouchableOpacity
-      style={[styles.Option]}
+        style={[styles.Option]}
         onPress={() => {
           props.optionIdx === correctAnswerIdx
             ? updateScore(1)
             : updateScore(0);
-          if (props.qnIndex + 1 >= Questions.questions.length) {
+          if (props.qnIndex + 1 >= Questions.python.length) {
             console.log('End of Quiz');
-            props.navigation.navigate('CongratsScreen')
+            props.navigation.navigate('CongratsScreen');
           } else {
-            props.navigation.navigate('QuestionScreen', {
+            props.navigation.navigate('PythonQuizScreen', {
               index: props.qnIndex + 1,
             });
           }
